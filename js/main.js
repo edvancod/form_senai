@@ -1,5 +1,5 @@
 document.getElementById("form").addEventListener("submit", function(event) {
-    event.preventDefault();
+   
 
     var formValid = true;
 
@@ -26,7 +26,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
     }
 
     // Sexo
-    var sexo = document.getElementById("sexo").value;
+    var sexo = document.getElementById("flexRadioDefault1").value;
     if (!sexo) {
       document.getElementById("sexoError").innerHTML = "Campo obrigatório";
       formValid = false;
@@ -66,7 +66,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
       document.getElementById("confirmarSenhaError").innerHTML = "Campo obrigatório";
       formValid = false;
     } else if (senha !== confirmarSenha) {
-      document.getElementById("confirmarSenhaError").innerHTML = "Senhas não conferem";
+      document.getElementById("confirmarSenhaError").innerHTML = "Senhas não são iguais !";
       formValid = false;
     }
 
